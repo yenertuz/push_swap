@@ -27,7 +27,7 @@ __Part 2 –push_swap  :__ reads from a file named `numbers` unsorted integers, 
 
 ##### Requirements
 
-a terminal, python3 (❤)
+a terminal, python3 ( ❤ )
 
 ##### Usage
 
