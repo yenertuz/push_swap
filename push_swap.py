@@ -35,10 +35,9 @@ if count == 3:
 	ps.sort_three(stack_a, ops_list)
 elif count == 2:
 	ps.sort_two(stack_a, ops_list)
-elif is_sorted(stack_a) == False:
-	info = ps.get_info(stack_a)
+elif ps.is_sorted(stack_a) == False:
 	while len(stack_a) > 3:
-		ps.get_min_and_pb(stack_a, stack_b, info, ops_list)
+		ps.get_min_and_pb(stack_a, stack_b, ops_list)
 	ps.sort_three(stack_a, ops_list)
 	while len(stack_b) > 0:
 		stack_b.pop(0)

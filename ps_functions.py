@@ -80,6 +80,20 @@ def sort_three(stack, ops_list):
 		ops_list.append("sa")
 		ops_list.append("rra")
 
+def get_min_and_pb(stack_a, stack_b, ops_list):
+	info = get_info(stack_a)
+	while info["index"] != 0:
+		if info["index"] > len(stack_a) / 2:
+			command = "rra"
+		else:
+			command = "ra"
+		run_command(command, stack_a, stack_b)
+		ops_list.append(command)
+		info = get_info(stack_a)
+	run_command("pb", stack_a, stack_b)
+	ops_list.append("pb")
+	
+
 def get_info(stack):
 	info = dict()
 	info["min"] = min(stack)
