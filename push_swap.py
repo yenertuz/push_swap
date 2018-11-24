@@ -46,3 +46,6 @@ elif ps.is_sorted(stack_a) == False:
 os.system("echo " + " ".join(ops_list) + " > ops")
 
 f.close()
+
+count_string = "Number count: %d \; Ops count: %d \\\n" % (len(numbers_list), len(ops_list))
+os.system("echo " + count_string + " > count")
